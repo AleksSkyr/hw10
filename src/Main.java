@@ -40,6 +40,7 @@ public class Main {
         }
         int deliveryDey = 1;
         if (distance > 20) {
+            System.out.println("Доставка составит " + deliveryDey + " дней");
         } else if (distance > 60) {
             deliveryDey++;
             System.out.println("Доставка составит " + deliveryDey + " дней");
