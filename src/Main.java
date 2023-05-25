@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
 
         leapYear(200);
-        printDevice(2019);
-        tasc3(30);
+        printDevice(0);
+        delivery(80);
 
     }
 
@@ -32,18 +32,23 @@ public class Main {
 
     }
 
-    private static int tasc3(int distance) {
+    private static int delivery(int distance) {
         System.out.println("Задача 3");
         if (distance > 100) {
             System.out.println("Доставка невозможна");
             return -1;
         }
         int deliveryDey = 1;
-        if (distance > 20) {
-            System.out.println("Доставка составит " + deliveryDey + " дней");
-        } else if (distance > 60) {
+        if (distance <= 20) {
+            System.out.println("Доставка составит " + deliveryDey + " день");
+        } else if (distance > 20 && distance <= 60) {
             deliveryDey++;
             System.out.println("Доставка составит " + deliveryDey + " дней");
+        } else if (distance > 60 && distance < 100) {
+            deliveryDey = deliveryDey + 2;
+            System.out.println("Доставка составит " + deliveryDey + " дней");
+        } else {
+            System.out.println("Доставка невозможна");
         }
         return deliveryDey;
     }
